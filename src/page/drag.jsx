@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import List from '../components/drag/List'
+import { Reorder, useDragControls } from "framer-motion"
 
 function Drag() {
-  const data = [
+  // const data =
+  const dragControls = useDragControls();
+  const [data, setData] = useState([
     {
       id: 1,
       title: "Interview preparation with JavaScript 2.0",
@@ -40,7 +43,7 @@ function Drag() {
     },
 
 
-  ]
+  ])
 
   return (
     <div className='flex bg-[#D2E3C8]  flex-col justify-center items-center w-full h-screen relative'>
@@ -51,10 +54,17 @@ function Drag() {
           <h2 className='text-[40px] font-[700] leading-[48.41px]'>Manage Bundle</h2>
           <p className='text-[20px] font-[400] leading-[24.2px] text-[#4b4747ee]'>Change orders of the products based on priority</p>
         </div>
-        {
-          data.map((item) => (
-            <List id={item.id} title={item.title} price={item.price} type={item.type} img={item.img} />
-          ))
+  
+  {
+          <Reorder.Group values={data} onReorder={setData}>
+
+            {data.map((item) => (
+              <Reorder.Item value={item} key={item.id} >
+
+              <List id={item.id} title={item.title} price={item.price} type={item.type} img={item.img} />
+              </Reorder.Item>
+            ))}
+          </Reorder.Group>
         }
 
       </div>
