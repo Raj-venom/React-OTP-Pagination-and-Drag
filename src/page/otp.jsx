@@ -77,7 +77,7 @@ function Otp({ otpLength = 4 }) {
 
     return (
         <div className='flex bg-[#3F72AF]  flex-col justify-center items-center w-full h-screen relative'>
-            <h2 className='text-center text-[75px] text-white  font-[700] leading-[96.82px] absolute top-2 '>Chai aur Code</h2>
+            <h2 className='text-center text-[75px] text-white  font-[700] leading-[96.82px] absolute top-2 drop-shadow-md '>Chai aur Code</h2>
 
             <div className=' flex flex-col justify-center items-center w-[756px] h-[514px] mt-16 rounded-[18px] bg-[#F9F7F7]'>
                 <h2 className='font-[700] tracking-[-5%] text-[40px] leading-[52.08px]'>Mobile Phone Verification</h2>
