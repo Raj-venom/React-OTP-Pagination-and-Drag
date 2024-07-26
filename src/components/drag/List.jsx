@@ -23,7 +23,7 @@ function List({ id, title, price, type, img }) {
             <div className='flex drop-shadow-xl bg-[#F7F7F7] w-[1025px] mt-2 h-[93px] rounded-[8px] justify-between px-5'>
 
                 <div className='flex items-center '>
-                    <MdOutlineDragIndicator onPointerDown={(event) => dragControls.start(event)} size="50px" color='#7F7F7F' />
+                    <MdOutlineDragIndicator className='cursor-pointer' onPointerDown={(event) => dragControls.start(event)} size="50px" color='#7F7F7F' />
                     <img src={`${img}`} className='w-[133px] h-[75px]  rounded-[8px]' alt="" />
                     <p className='text-[20px]  font-[500] leading-[24.2px]  text-[#000000] ml-4'>{title}</p>
                 </div>
