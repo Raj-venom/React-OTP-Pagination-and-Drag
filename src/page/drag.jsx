@@ -54,21 +54,23 @@ function Drag() {
           <h2 className='text-[40px] font-[700] leading-[48.41px]'>Manage Bundle</h2>
           <p className='text-[20px] font-[400] leading-[24.2px] text-[#4b4747ee]'>Change orders of the products based on priority</p>
         </div>
-  
-  {
+
+        {
           <Reorder.Group values={data} onReorder={setData}>
 
             {data.map((item) => (
               <Reorder.Item value={item} key={item.id} >
 
-              <List id={item.id} title={item.title} price={item.price} type={item.type} img={item.img} />
+                <List id={item.id} title={item.title} price={item.price} type={item.type} img={item.img} />
               </Reorder.Item>
             ))}
           </Reorder.Group>
         }
 
       </div>
-      <img className='absolute w-[120px] h-[125px] bottom-7 right-16' src="chai.png" alt="chai" />
+      <a href="https://chaicode.com/" target="_blank" rel="noopener noreferrer">
+        <img className='absolute w-[120px] h-[125px] bottom-7 right-16' src="chai.png" alt="chai" />
+      </a>
     </div>
 
   )

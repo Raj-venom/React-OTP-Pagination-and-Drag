@@ -58,12 +58,12 @@ function Otp({ otpLength = 4 }) {
         const value = input.join("")
         console.log(value)
 
-        if(value.length !== 4) {
+        if (value.length !== 4) {
             setBgcolor("bg-[#112D4E]")
             setStatus("Verify Account")
             return
         }
-        
+
 
         if (value === "1234") {
             setBgcolor("bg-[#23CF9B]")
@@ -100,10 +100,14 @@ function Otp({ otpLength = 4 }) {
                 </div>
 
                 <Button bgcolor={bgcolor} >{status}</Button>
-                
+
                 <p className='text-[#BFBFBF] mt-3 text-[25px] leading-[32.55px] tracking-[-4%] font-[400]'>Didn’t receive code?  <span className='text-[#112D4E]'>Resend</span>  </p>
             </div>
-            <img className='absolute w-[125px] h-[125px] bottom-7 right-12' src="chai.png" alt="chai" />
+            <a href="https://chaicode.com/" target="_blank" rel="noopener noreferrer">
+                <img className='absolute w-[125px] h-[125px] bottom-7 right-12' src="chai.png" alt="chai" />
+
+            </a>
+
         </div>
 
     )
